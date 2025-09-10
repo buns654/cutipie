@@ -2,11 +2,11 @@
 <html>
 <head>
   <title>My First Webpage</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <style>
     body {
       background-color: lightpink;
-      font-family: 'Great Vibes', cursive;
+      font-family: 'Pacifico', cursive;
       text-align: center;
     }
     h1 {
@@ -32,12 +32,14 @@
       font-size: 18px;
       border-radius: 10px;
       cursor: pointer;
-      font-family: inherit;
-      margin: 0 10px; /* space between buttons */
+      font-family: Arial, sans-serif; /* readable + cute */
+      margin: 0 10px;
+      transition: 0.3s;
     }
     button:hover {
       background-color: violet;
       color: white;
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -46,23 +48,14 @@
   <img src="catto.GIF" alt="Cute GIF">
   <p>punyeta ka</p>
 
-  <br>
-  <iframe id="myVideo" width="560" height="315"
-    src="https://www.youtube.com/embed/qsJkFb7UW_g?enablejsapi=1"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen>
-  </iframe>
-
   <div class="button-container">
     <button onclick="alert('HIHIHI CUTIEPIE 💖')">👉 click mo na to beh 💖</button>
-    <button onclick="playVideo()">▶️ Play Song</button>
+    <button onclick="playSong()">▶️ Play Song</button>
   </div>
 
   <script>
-    function playVideo() {
-      var iframe = document.getElementById('myVideo');
-      iframe.src = "https://www.youtube.com/embed/qsJkFb7UW_g?autoplay=1";
+    function playSong() {
+      window.open("https://www.youtube.com/watch?v=qsJkFb7UW_g", "_blank");
     }
   </script>
 </body>
